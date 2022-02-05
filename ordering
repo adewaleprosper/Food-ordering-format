@@ -1,0 +1,163 @@
+#Food ordering format in a resturant
+
+print("Hi, Please kindly input your name to PROCEED to order.")
+
+#Create a varaible to hold the user 'Name' input.
+
+user_input_1 = input()
+
+print("Welcome " + user_input_1 + " what will you like to order?\n")
+print("We have a list of special dishes, Just type SPECIAL to order.\n")
+
+menu = ['*Main Dishes', '*Proteins', '*Sides', '*Special']
+
+for menus in menu[:4]:
+    print(menus.title())
+
+print("Kindly select an order.......\n")
+
+#Create a varaible to hold the user input.
+
+user_input_2 = input()
+
+#customer inputs the kind of food they want to order.
+
+if user_input_2 == 'main dishes':
+    dishes = ['village rice', 'jollof rice', 'fried rice', 'fiesta rice', 'chinese rice', 'jollof spaghetti',]
+    print("The following are the main dishes available......\n")
+    
+    
+    print(dishes[0])
+    print(dishes[1])
+    print(dishes[2])
+    print(dishes[3])
+    print(dishes[4])
+    print(dishes[5])
+
+    print("\nKindly select a Dish form the List above\n")
+    
+    #Create a varaible to hold the user input.
+
+    selected_dish = input("Select a dish form the main dish list........\n")
+        
+    if selected_dish in dishes:
+        print("\nthe price of " + selected_dish + " is $15")
+        print("\nWill you like to add any side Dish?")
+
+        #Create a varaible to hold the user input.
+
+        side_1 = input("\nYES or NO....")
+        if side_1 == 'yes':
+            print("\nHere are a list of side Dishes>>")
+            siides = ['moi moi', 'chicken salad', 'coleslaw', 'fried plantain', 'pasta salad', 'snail salad']
+            for side in siides:
+                print(side.title())
+            print("Each side dish costs... $5")
+            print("\nPlease select a side dish...")
+
+            #Create a varaible to hold the user input.
+
+            s_dish_1 = input("...")
+            
+            print("\nAdding " + s_dish_1 + " to your " + selected_dish + " Kindly hold.....")
+            print("\n...")
+            print("\nYour order is ready")
+
+        else:
+            print("\n...")
+            print("\nThis is not available, Kindly select from the list given\n THANK YOU")
+
+    
+        
+
+elif user_input_2 == 'proteins':
+    ptains = ['curry chicken', 'grilled chicken', 'goat meat', 'grilled turkey', 'titus fish', 'beef', 'snail', 'kpomo',]
+    print("The following are the Protein Dishes available.......\n")
+    for ptain in ptains:
+        print(ptain.title())
+    print("\nKindly select a Dish...")
+
+    #Create a varaible to hold the user input.
+
+    selected_dish_1 = input("\nSelect a Dish from the Protein List above...")
+
+    if selected_dish_1 in ptains:
+        print("\nthe price of " + selected_dish_1 + " is $10")
+        print("\nWill you like to add any side Dish?")
+
+        #Create a varaible to hold the user input.
+        
+        side_1 = input("\nYES or NO....")
+        if side_1 == 'yes':
+            print("\nHere are a list of side Dishes>>")
+            siides = ['moi moi', 'chicken salad', 'coleslaw', 'fried plantain', 'pasta salad', 'snail salad']
+            for side in siides:
+                print(side.title())
+            print("Each side dish costs... $5")
+            print("\nPlease select a side dish...")
+
+            #Create a varaible to hold the user input.
+
+            s_dish_1 = input("...")
+
+            print("\nAdding " + s_dish_1 + " to your " + selected_dish_1 + " Kindly hold.....")
+            print("\n...")
+            print("\nYour order is ready")
+
+        else:
+            print("\n...")
+            print("\nThis is not available, Kindly select from the list given\n THANK YOU")
+
+
+
+
+elif user_input_2 == 'sides':
+    toppings = ['moi moi', 'chicken salad', 'coleslaw', 'fried plantain', 'pasta salad', 'snail salad']
+    print("This are the list of side toppings available........\n")
+    for topping in toppings:
+        print(topping.title())
+    print("\nEach Side Dish costs $5")
+    print("\n...")
+    print("\nKindly select a Side Dish>>>")
+
+    #Create a varaible to hold the user input.
+
+    dissh_1 = input("\n...")
+
+    if dissh_1 in toppings:
+        print("\nPreparing " + dissh_1 + " Hold ON Please>>>")
+        print("\n...")
+        print("\nYour Order is Ready.")
+    else:
+        print("\n...")
+        print("\nThis is not available, Kindly select from the list given\n THANK YOU")   
+     
+
+
+
+elif user_input_2 == 'special':
+    exceptionals = ['special fried rice', 'village rice', 'amala with gbegiri and ewedu', 'stir fried spaghetti',]
+    print("The following are the Special Dishes available.........\n")
+    for exceptional in exceptionals:
+        print(exceptional.title())
+    print("\nEach special Dish costs $25")
+    print("\n...")
+    print("\nKindly select from the list above")
+
+    #Create a varaible to hold the user input.
+    
+    dissh_2 = input("\n...")
+    
+    if dissh_2 in exceptionals:
+        print("\nPreparing " + dissh_2 + " Hold on please.")
+        print("\n...")
+        print("\nYour Order is Ready.")
+    else:
+        print("\n...")
+        print("\nThis is not available, Kindly select from the list given\n THANK YOU")
+
+else:
+    print("...")
+    print("\nPlease select from what we have on the MENU.")
+
+
